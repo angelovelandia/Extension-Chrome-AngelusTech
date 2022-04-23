@@ -1,0 +1,43 @@
+{
+    "manifest_version": 2,
+    "name": "AngelusTechYT",
+    "version": "1.0",
+    "background" : {
+        "scripts" : ["background.js"]
+    },
+    "author": "AngelusTech",
+    "description": "Ahora puedes estar al dia con el canal y todas las novedades que se vengan facilmente.",
+    "icons": {
+        "16": "./img/logo16x16.png",
+        "48": "./img/logo48x48.png",
+        "128": "./img/logo128x128.png"
+    },
+    "browser_action": {
+        "default_icon": "./img/logo16x16.png",
+        "default_popup": "index.html"
+    },
+    "commands" : {
+        "start" : {
+            "suggestion_key" : {
+                "default" : "Ctrl+Alt+M",
+                "mac" : "Ctrl+Alt+M"
+            },
+            "description" : "StarApp",
+            "shortcut" : "Ctrl+Alt+M",
+            "global" : true,
+            "_execute_action": {
+                "suggested_key": {
+                  "windows": "Ctrl+Alt+M",
+                  "mac": "Command+Alt+M",
+                  "chromeos": "Ctrl+Alt+M",
+                  "linux": "Ctrl+Alt+M"
+                }
+              }
+        }
+    },
+    "permissions": [
+        "background",
+        "tabs",
+        "activeTab"
+    ]
+}
